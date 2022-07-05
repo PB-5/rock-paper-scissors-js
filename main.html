@@ -7,3 +7,25 @@
  <title>A console game..</title>
 </head>
 <body>
+
+</body>
+
+<script>
+
+    // Random 'choice' out of 3 variables, so we can call outside of scope
+    let choice = Math.random() * 3;
+
+    function computerPlay() {
+    if (choice <= 1) {
+        choice = 'Rock';
+    } else if (choice <= 2) {
+        choice = 'Paper';
+    } else {
+        choice = 'Scissors';
+    }}
+
+    computerPlay();
+    console.log(choice);
+
+</script>
+</html>
