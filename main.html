@@ -1,63 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>A console game..</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSOLE: Rock Paper Scissors</title>
+    <link rel="stylesheet" href="C:\Users\patsb192\rock-paper-scissors\styles.css">
+    <script src="script.js" defer></script>
 </head>
+
+<html>
+
 <body>
+    <div class="main-container">
+        <div class="the-title"> Rock Paper Scissors </div>
+        <button onclick="game()">Start Game!</button>
+        <div class="player-note">NOTE: This game is played in the console. Press CTRL SHIFT + J to open console.</div>
+    </div>
+
 
 </body>
 
-<script>
-
-    // This function is the computer's turn
-    function computerPlay() {
-        let choice = ["rock", "paper", "scissors"];
-        return choice [Math.floor(Math.random() * 3)]; // Multiplied by 3 = No decimals or fractions used
-    }
-
-    // These are the conditions against a given choice
-    function playRound(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
-        return `It's a tie! ${playerSelection.charAt(0).toUpperCase()+ playerSelection.slice(1)}`; 
-    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-      return 'You won! Rock beats Scissors';
-   } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        return 'You won! Scissors beats Paper';
-    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        return 'You won! Paper beats Rock';
-    } else {
-        return `You have lost ${computerSelection.charAt(0).toUpperCase()+ computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase()+ playerSelection.slice(1)}`
-    }}
-    
-    const playerSelection = prompt("Start the game by picking among 'Rock, Paper, Scissors'").toLowerCase(); // Case in-sens
-    const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection))
-
-    function game(playRound) {
-
-    }
-
-/*
-     switch (playerSelection === computerSelection) {
-        case 1: playerSelection === computerSelection;
-        `It's a tie! ${playerSelection}`;
-        break;
-        case 2:  playerSelection === 'rock' && computerSelection === 'scissors'; 
-        'You won! Rock beats Scissors';
-        break;
-        case 3: playerSelection === 'scissors' && computerSelection ==='paper';
-        'You won! Scissors beats paper';
-        break;
-        case 4:  playerSelection === 'paper' && computerSelection ==='rock';
-        'You won! Paper beats rock';
-        break;
-        default:
-            `You have lost ${computerSelection} has beat you ${playerSelection}`
-    }
-
- */
-</script>
 </html>
