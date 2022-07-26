@@ -11,15 +11,15 @@ function game() {
     }
     document.querySelector("button").textContent = "Play Again?"; // Once first round finishes this will display as new text on button
     winCount(); // After 5 rounds are played display the console.logs function
-}
+} 
 
-function playRound(round) {  
+/*  function playRound(round) {  
     const playerSelection = playerChoice();  // These two Selections are assigned with functions for both computer and user inputs
     const computerSelection = computerTurn();
     const theWinner = win(playerSelection, computerSelection);
     score.push(theWinner);
     roundCount(playerSelection, computerSelection, theWinner, round);
-}
+} */
 
 function playerChoice() {
     let input = prompt("Choose: 'Rock, Paper or Scissors!' "); 
