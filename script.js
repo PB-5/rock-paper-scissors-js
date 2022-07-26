@@ -82,3 +82,21 @@ function win(userChoice, computerChoice) {
        return "Computer";
     }
 }
+
+const startGame = () => {
+    const start = document.getElementById('start');
+    const introDisplay = document.querySelector('.first')
+
+
+    start.addEventListener('click', function () {
+        introDisplay.classList.add('fadeOut')
+        bottom.classList.add('fadeIn')
+        scoreDisplay.classList.add('fadeIn')
+        gameDisplay.classList.add('fadeIn')
+        setTimeout(() => {
+          introDisplay.style.display = 'none'
+        }, 300)
+      })
+    }
+
+startGame()
