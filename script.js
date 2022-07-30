@@ -1,98 +1,16 @@
-const choices = ["rock", "paper", "scissors"];
-const score = [];
-
-// Arrow function for computer choice randomly choosing from the choices array
-let computerTurn = computerPlay => choices[Math.floor(Math.random() * choices.length)]; 
-
-// Loop function to check if it's 5 rounds
-function game() {
-    for (let i = 1; i <= 5; i++) {
-        playRound(i); // i is passed as an argument into playRound 
-    }
-    document.querySelector("button").textContent = "Play Again?"; // Once first round finishes this will display as new text on button
-    winCount(); // After 5 rounds are played display the console.logs function
-} 
-
-/*  function playRound(round) {  
-    const playerSelection = playerChoice();  // These two Selections are assigned with functions for both computer and user inputs
-    const computerSelection = computerTurn();
-    const theWinner = win(playerSelection, computerSelection);
-    score.push(theWinner);
-    roundCount(playerSelection, computerSelection, theWinner, round);
-} */
-
-function playerChoice() {
-    let input = prompt("Choose: 'Rock, Paper or Scissors!' "); 
-    while (input == null) {
-        input = prompt("Choose: 'Rock, Paper or Scissors!' "); // If not one of these 3 options prompt can't be exited
-    }
-
-    input = input.toLowerCase(); // If user types in caps it will still recognize the keyword
-    let check = validation(input) // Check against the argument 'input' if the correct choice from the Array was selected
-    
-    while (check == false) {
-        input = prompt("Invalid choice!"); // If not 'rock, sicssors, paper' invalid !!!
-    
-    while (input == null) {
-        input = prompt("Choose: 'Rock, Paper or Scissors!' ");
-
-    }
-    input = input.toLowerCase();
-    check = validation(input);
-    }
-    return input;
-}
-
-function validation(choice) {  
-    return choices.includes(choice); // This function checks whether the user entered the correct choice from the Array
-}
-
-function winCount() {
-    // Filters the key word in order to add the score to it
-    let userWins =  score.filter((item) => item == "Human").length;
-    let computerWins = score.filter((item) => item == "Computer").length;
-    let ties = score.filter((item) => item == "Nobody").length;
-    // After 5 rounds these logs appear at the bottom
-    console.log("Results: ");
-    console.log("Human wins: ", userWins);
-    console.log("Computer wins: ", computerWins);
-    console.log("Ties: ", ties);
-}
-
-// The round parameter is passed as an argument in playRound 
-function roundCount(userChoice, computerChoice, theWinner, round) {
-    console.log("Round:" ,round)
-    console.log("Human chose:" ,userChoice);
-    console.log("Computer chose:" ,computerChoice);
-    console.log(theWinner, "won this round!");
-    console.log("--------------------------------------");
-}
-
-function win(userChoice, computerChoice) {
-    if (userChoice === computerChoice) {
-        return "Nobody";
-    }
-    else if 
-    ((userChoice === "paper" && computerChoice === "rock") || 
-    (userChoice === "rock" && computerChoice === "scissors") || 
-    (userChoice === "scissors" && computerChoice === "paper"))
-    { return "Human"; }  
-    
-    else {
-       return "Computer";
-    }
-}
 
 const startGame = () => {
-    const start = document.getElementById('start');
+    const start = document.getElementById('start')
     const introDisplay = document.querySelector('.first')
-    const board = document.querySelector(".board");
+    const board = document.querySelector(".board")
     const scoreDisplay = document.querySelector('.top')
     const gameDisplay = document.querySelector('.second')
     const bottom = document.querySelector('.bottom')
+    const intro = document.querySelector('audio[data-key="intro"]');
    
 
     start.addEventListener('click', function () {
+        intro.play()
         introDisplay.classList.add('fadeOut')
      
         setTimeout(() => {
@@ -101,15 +19,131 @@ const startGame = () => {
             board.classList.add('fadeIn')
             bottom.classList.add('fadeIn')
             scoreDisplay.classList.add('fadeIn')
-            gameDisplay.classList.add('fadeIn')
+            gameDisplay.classList.add('fadeIn');
           }, 10)
           introDisplay.style.display = 'none'
         }, 200)
       })
     }
 
-   
+const playGame = () => {
+    const btn = document.querySelectorAll('.btn');
+    const imgs = document.querySelectorAll('img');
+    const mes = document.querySelector('.messageDisplay h2');
+    const player = document.querySelector('.player');
+    const computer = document.querySelector('.computer');
+    const shake = document.querySelector('audio[data-key="shake"]');
+    const score = document.querySelector('audio[data-key="score"]');
+
+    let pScore = 0;
+    let cScore = 0;
+    const select = ['rock', 'paper', 'scissors']
+
+    mes.addEventListener('animationend', function () {
+        this.style.animation = ''
+      })
+
+      imgs.forEach(img => {
+        img.addEventListener('animationend', function () {
+          this.style.animation = ''
+        })
+      })
+
+      btn.forEach(bt => {
+        bt.addEventListener('click', function () {
+  
+          // set the img back to rock image
+          player.src = `./img/rock.png`
+          computer.src = `./img/rock.png`
+  
+          // play audio effect
+          shake.play()
+  
+          // remove the pointers to avoid double clicking
+          btn.forEach(b => {
+            b.style.pointerEvents = 'none'
+          })
+  
+          // create a random choice for the computer
+          let n = Math.floor(Math.random() * select.length)
+          const playerSel = this.classList[1]
+          const compSel = select[n]
+  
+          // add animation
+          player.style.animation = 'shakePlayer 1s ease'
+          computer.style.animation = 'shakeComputer 1s ease'
+          mes.textContent = 'Waiting . . .'
+          mes.style.animation = 'shaking 0.4s ease'
+  
+          // timer after run action
+          setTimeout(() => {
+  
+            computer.src = `./img/${compSel}.png`
+            player.src = `./img/${playerSel}.png`
+  
+            // put back the pointer events after running
+            btn.forEach(b => {
+              b.style.pointerEvents = 'all'
+            })
+  
+            // evaluate who won the game
+            evaluateResult(playerSel, compSel)
+          }, 1000)
+        })
+      })  
+    
+
+const evaluateResult = (player, comp) => {
+    // set the evaluation after 200 mils
+    setTimeout(() => {
+      // if player is rock
+      if (player === 'rock') comp === 'scissors' ? win() : comp === 'paper' ? lose() : tie()
+      // if player is paper
+      if (player === 'paper') comp === 'rock' ? win() : comp === 'scissors' ? lose() : tie()
+      // if player is scissors
+      if (player === 'scissors') comp === 'paper' ? win() : comp === 'rock' ? lose() : tie()
+    }, 600)
+}
+
+  // if player wins
+  const win = () => {
+    const plScore = document.querySelector('.plScore');
+
+    // remove animation after 
+    plScore.addEventListener('animationend', function () { this.style.animation = '' })
+
+    // play audio
+    score.play()
+    pScore = pScore + 1
+    mes.textContent = 'you Win!'
+    plScore.textContent = pScore
+    plScore.style.animation = 'addScore 0.2s ease'
+  }
+
+  // if player lose
+  const lose = () => {
+    const comScore = document.querySelector('.comScore');
+
+    // remove animation after
+    comScore.addEventListener('animationend', function () { this.style.animation = '' })
+
+    // play audio
+    score.play()
+    cScore = cScore + 1
+    mes.textContent = 'you lose!'
+    comScore.textContent = cScore
+    comScore.style.animation = 'addScore 0.2s ease'
+  }
+
+  //when game is tied
+   const tie = () => {
+   mes.textContent = `It's a tie!`
+  }
+
+}
 
 
-   
-startGame()
+  // start game
+startGame();
+playGame();
+
