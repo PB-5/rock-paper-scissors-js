@@ -16,7 +16,8 @@
         <button onclick="game()">Start Game!</button>
         <div class="player-note">NOTE: This game is played in the console. Press CTRL SHIFT + J to open console.</div>  
     </div>
---> 
+-->
+<!-------------------------------------- BELOW IS THE UPDATED GAME WITH UI ------------------------------------------------------->
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
             <defs>
           
@@ -65,24 +66,28 @@
                 <div class="top">
                     <div class="score">
                     <h2>player:</h2>
-                    <p class="p1Score">0</p>
+                    <p class="plScore">0</p>
                     </div>
                     <div class="score">
                     <h2>computer:</h2>
-                    <p class="compScore">0</p>
+                    <p class="comScore">0</p>
                     </div>
                 </div>        
                 <div class="messageDisplay">
                     <h2>choose an option...</h2>
                 </div>
           </div>
-          <div class="bottom">
-            <button class="btn rock">rock</button>
-            <button class="btn paper">paper</button>
-            <button class="btn scissors">scissors</button>
-        </div>
-</div>
-</div>
-</body>
 
+          <div class="bottom">
+            <button class="btn rock"><img src="rock.png" alt=""></button> 
+            <button class="btn paper"><img src="paper.png" alt=""></button>
+            <button class="btn scissors"><img src="scissors.png" alt=""></button>
+        </div>
+
+    </div>
+</div>
+    <audio data-key="intro" src="intro.mp3"></audio>  <!-- Change these sounds -->
+    <audio data-key="score" src="score.mp3"></audio>
+    <audio data-key="shake" src="shake.mp3"></audio>
+</body>
 </html>
