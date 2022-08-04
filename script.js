@@ -20,9 +20,9 @@ const startGame = () => {
             bottom.classList.add('fadeIn')
             scoreDisplay.classList.add('fadeIn')
             gameDisplay.classList.add('fadeIn');
-          }, 10)
+          }, 20)
           introDisplay.style.display = 'none'
-        }, 200)
+        }, 300)
       })
     }
 
@@ -53,11 +53,12 @@ const playGame = () => {
         bt.addEventListener('click', function () {
   
           // set the img back to rock image
-          player.src = `./img/rock.png`
-          computer.src = `./img/rock.png`
-  
+          player.src = `./img/player-placeholder.png`
+          computer.src = `./img/comp/comp-placeholder.png`
+        
           // play audio effect
-          shake.play()
+          shake.play() 
+         
   
           // remove the pointers to avoid double clicking
           btn.forEach(b => {
@@ -70,7 +71,7 @@ const playGame = () => {
           const compSel = select[n]
   
           // add animation
-          player.style.animation = 'shakePlayer 1s ease'
+          player.style.animation = 'shakePlayer 0s ease'
           computer.style.animation = 'shakeComputer 1s ease'
           mes.textContent = 'Waiting . . .'
           mes.style.animation = 'shaking 0.4s ease'
@@ -78,8 +79,8 @@ const playGame = () => {
           // timer after run action
           setTimeout(() => {
   
-            computer.src = `./img/${compSel}.png`
-            player.src = `./img/${playerSel}.png`
+            computer.src = `./img/comp/${compSel}.gif`  // Add Photoshop GIF files into img folder
+            player.src = `./img/${playerSel}.gif`
   
             // put back the pointer events after running
             btn.forEach(b => {
@@ -91,7 +92,6 @@ const playGame = () => {
           }, 1000)
         })
       })  
-    
 
 const evaluateResult = (player, comp) => {
     // set the evaluation after 200 mils
@@ -102,8 +102,9 @@ const evaluateResult = (player, comp) => {
       if (player === 'paper') comp === 'rock' ? win() : comp === 'scissors' ? lose() : tie()
       // if player is scissors
       if (player === 'scissors') comp === 'paper' ? win() : comp === 'rock' ? lose() : tie()
-    }, 600)
+    }, 50)
 }
+
 
   // if player wins
   const win = () => {
@@ -115,7 +116,7 @@ const evaluateResult = (player, comp) => {
     // play audio
     score.play()
     pScore = pScore + 1
-    mes.textContent = 'you Win!'
+    mes.textContent = 'You Win!'
     plScore.textContent = pScore
     plScore.style.animation = 'addScore 0.2s ease'
   }
@@ -130,7 +131,7 @@ const evaluateResult = (player, comp) => {
     // play audio
     score.play()
     cScore = cScore + 1
-    mes.textContent = 'you lose!'
+    mes.textContent = 'You Lose!'
     comScore.textContent = cScore
     comScore.style.animation = 'addScore 0.2s ease'
   }
@@ -141,7 +142,6 @@ const evaluateResult = (player, comp) => {
   }
 
 }
-
 
   // start game
 startGame();
