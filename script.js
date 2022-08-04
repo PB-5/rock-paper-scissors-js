@@ -5,8 +5,10 @@ const startGame = () => {
     const board = document.querySelector(".board")
     const scoreDisplay = document.querySelector('.top')
     const gameDisplay = document.querySelector('.second')
+    const footer = document.querySelector('.footer')
     const bottom = document.querySelector('.bottom')
     const intro = document.querySelector('audio[data-key="intro"]');
+
    
 
     start.addEventListener('click', function () {
@@ -21,6 +23,7 @@ const startGame = () => {
             scoreDisplay.classList.add('fadeIn')
             gameDisplay.classList.add('fadeIn');
           }, 20)
+          footer.style.display = 'none'
           introDisplay.style.display = 'none'
         }, 300)
       })
@@ -102,7 +105,7 @@ const evaluateResult = (player, comp) => {
       if (player === 'paper') comp === 'rock' ? win() : comp === 'scissors' ? lose() : tie()
       // if player is scissors
       if (player === 'scissors') comp === 'paper' ? win() : comp === 'rock' ? lose() : tie()
-    }, 50)
+    }, 600)
 }
 
 
