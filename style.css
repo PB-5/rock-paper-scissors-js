@@ -43,7 +43,7 @@ body {
             animation: squiggly-anim 0.34s linear infinite;
     font-size: 50px;
 
-   /* margin-top: 50px; */
+    margin-top: 50px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +56,7 @@ body {
 }
 
 #start {
-    margin-top: 10px;
+    margin-top: -30px;
 
     font-size: 16px;
     font-weight: 400;
@@ -115,6 +115,7 @@ body {
 
   .second {
     opacity: 0;
+    margin-bottom: 50px;
   }
 
   .handsContainer {
@@ -139,14 +140,14 @@ body {
   }
 
   .player {
-    height: 250px;
+    height: 300px;
     margin-right: 20px;
-    width: 300px;
+    width: 350px;
   }
 
   .computer {
-    height: 250px;
-    width: 300px;
+    height: 300px;
+    width: 350px;
     margin-right: 10px;
   }
 
@@ -191,7 +192,9 @@ body {
   }
 
   .footer {
-    position: fixed;
+    margin: 0;
+    box-sizing: border-box;
+    position: absolute;
     bottom: 0;
     left: 0;
     display: flex;
@@ -221,29 +224,32 @@ body {
   }
 
   @media (max-width: 550px) {
-    .title {
-      font-size: 18px;
+    .first {
+      font-size: 24px;
+      margin-top: 150px;
+    }
+
+    #start {
+      font-size: 36px;
     }
   
-    .score-info {
-      font-size: 26px;
+    .messageDisplay {
+      font-size: 24px;
     }
   
+    .board {
+      margin-top: 10px;
+    }
+
+    .top {
+      font-size: 16px;
+    }
+
     .buttons {
       gap: 10px;
     }
-  
-    .btn-square {
-      width: 100px;
-      height: 100px;
-    }
-  
-    .sign {
-      font-size: 50px;
-    }
-  
+
     .footer {
-      width: 95%;
-      position: fixed;
+      text-align: center;
     }
   }
