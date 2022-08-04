@@ -43,7 +43,7 @@ body {
             animation: squiggly-anim 0.34s linear infinite;
     font-size: 50px;
 
-    margin-top: 50px;
+   /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,6 +82,7 @@ body {
   .board {
     opacity: 0;
     display: none;
+    margin-top: -50px;
   }
 
   .top {
@@ -92,16 +93,19 @@ body {
 
   /* Player and Computer */
   .score {
-    font-family: 'Lacquer', arial;
+    font-size: 20px;
+    font-family: 'Kbpancakeparty', arial;
     -webkit-animation: squiggly-anim 0.34s linear infinite;
             animation: squiggly-anim 0.34s linear infinite;
             display: flex;
 
+    
     }
   /* 0 style */
   .plScore, .comScore {
-    font-family: 'kbtruebeliever', monospace;
+    font-family: 'Kbpancakeparty', arial;
     font-size: 26px;
+    margin-top: 30px;;
     margin-left: 10px;
   }
 
@@ -134,18 +138,27 @@ body {
     align-items: center;
   }
 
-  .player, .computer {
-    height: 200px;
+  .player {
+    height: 250px;
+    margin-right: 20px;
     width: 300px;
+  }
+
+  .computer {
+    height: 250px;
+    width: 300px;
+    margin-right: 10px;
   }
 
   .messageDisplay {
     text-align: center;
     -webkit-animation: squiggly-anim 0.34s linear infinite;
             animation: squiggly-anim 0.34s linear infinite;
-    font-size: 22px;
+    font-size: 26px;
     margin-right: 10px;
-    font-family: 'lacquer', arial;
+    font-family: 'Kbpancakeparty', arial;
+
+    margin-top: -12px;
   }
   
   .bottom {
@@ -177,6 +190,25 @@ body {
     transform: translateY(4px);
   }
 
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 10px;
+    
+    font-size: 16px;
+    font-family: 'Kbsneakywalrus', arial;
+    font-weight: 600;
+
+    -webkit-animation: squiggly-anim 0.34s linear infinite;
+            animation: squiggly-anim 0.34s linear infinite;
+  }
+
+
   /* Main title start game fade out */
 .fadeOut {
     opacity: 0;
@@ -185,7 +217,7 @@ body {
   
   .fadeIn {
     opacity: 1;
-    transition: opacity 0.9s ease 0.3s
+    transition: opacity 0.9s ease 0.6s
   }
 
   @media (max-width: 550px) {
@@ -210,7 +242,8 @@ body {
       font-size: 50px;
     }
   
-    .modal {
+    .footer {
       width: 95%;
+      position: fixed;
     }
   }
