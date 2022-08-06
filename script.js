@@ -31,7 +31,7 @@ const startGame = () => {
 
 const playGame = () => {
     const btn = document.querySelectorAll('.btn');
-    const imgs = document.querySelectorAll('img');
+    const pngs = document.querySelectorAll('png');
     const mes = document.querySelector('.messageDisplay h2');
     const player = document.querySelector('.player');
     const computer = document.querySelector('.computer');
@@ -46,8 +46,8 @@ const playGame = () => {
         this.style.animation = ''
       })
 
-      imgs.forEach(img => {
-        img.addEventListener('animationend', function () {
+      pngs.forEach(png => {
+        png.addEventListener('animationend', function () {
           this.style.animation = ''
         })
       })
@@ -92,6 +92,8 @@ const playGame = () => {
   
             // evaluate who won the game
             evaluateResult(playerSel, compSel)
+          
+       
           }, 1000)
         })
       })  
@@ -100,12 +102,12 @@ const evaluateResult = (player, comp) => {
     // set the evaluation after 200 mils
     setTimeout(() => {
       // if player is rock
-      if (player === 'rock') comp === 'scissors' ? win() : comp === 'paper' ? lose() : tie()
+      if (player === 'rock') comp === 'scissors' ? win() : comp === 'paper' ? lose() : tie() 
       // if player is paper
-      if (player === 'paper') comp === 'rock' ? win() : comp === 'scissors' ? lose() : tie()
+      if (player === 'paper') comp === 'rock' ? win() : comp === 'scissors' ? lose() : tie() 
       // if player is scissors
-      if (player === 'scissors') comp === 'paper' ? win() : comp === 'rock' ? lose() : tie()
-    }, 600)
+      if (player === 'scissors') comp === 'paper' ? win() : comp === 'rock' ? lose() : tie() 
+    }, 600) 
 }
 
 
@@ -118,10 +120,15 @@ const evaluateResult = (player, comp) => {
 
     // play audio
     score.play()
-    pScore = pScore + 1
+    pScore++
     mes.textContent = 'You Win!'
     plScore.textContent = pScore
     plScore.style.animation = 'addScore 0.2s ease'
+
+    if (pScore === 5) {
+      mes.textContent = "You Won! Returning to Menu";
+      return setTimeout(() => window.location.reload(), 3500)
+    }
   }
 
   // if player lose
@@ -133,10 +140,15 @@ const evaluateResult = (player, comp) => {
 
     // play audio
     score.play()
-    cScore = cScore + 1
+    cScore++
     mes.textContent = 'You Lose!'
     comScore.textContent = cScore
     comScore.style.animation = 'addScore 0.2s ease'
+
+    if (cScore === 5) {
+      mes.textContent = "Computer Won! Returning to Menu";
+      return setTimeout(() => window.location.reload(), 3500);
+    }
   }
 
   //when game is tied
@@ -144,9 +156,9 @@ const evaluateResult = (player, comp) => {
    mes.textContent = `It's a tie!`
   }
 
+// when score is 5 refresh the game automatically
 }
 
   // start game
 startGame();
 playGame();
-
