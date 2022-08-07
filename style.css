@@ -34,13 +34,6 @@
     }
   }
   
-  @font-face {
-    font-family: 'kbtruebeliever';
-    src: url('./fonts/kbtruebeliever.woff2') format('woff2'),
-         url('./fonts/kbtruebeliever.woff') format('woff'),
-         url('./fonts/kbtruebeliever.tff') format('truetype');
-  }
-  
    @font-face {
     font-family: 'kbtruebeliever';
     src: url('./fonts/kbtruebeliever.woff2') format('woff2'),
@@ -75,7 +68,6 @@
     src: url('./fonts/kbsneakywalrus.woff2') format('woff2'),
          url('./fonts/kbsneakywalrus.woff') format('woff');
     font-weight: 600;
-    font-style: normal;
   }
   
 body {
@@ -87,6 +79,7 @@ body {
             animation: squiggly-anim 0.34s linear infinite;
     font-size: 50px;
     font-family: 'kbtruebeliever';
+    font-weight: 900;
     margin-top: 50px; 
     display: flex;
     flex-direction: column;
@@ -267,7 +260,7 @@ body {
   @media (max-width: 550px) {
     .first {
       font-size: 24px;
-      margin-top: 150px;
+      margin-top: 120px;
     }
 
     #start {
@@ -280,7 +273,7 @@ body {
     }
   
     .board {
-      margin-top: 10px;
+      margin-top: -70px;
     }
 
     .top {
