@@ -35,19 +35,35 @@
 
   @font-face {
     font-family: 'kbtruebeliever';
-    src: url('kbtruebeliever-oqwb-webfont.woff2') format('woff2'),
-         url('kbtruebeliever-oqwb-webfont.woff') format('woff');
+    src: url('fonts/kbtruebeliever-oqwb-webfont.woff2') format('woff2'),
+         url('fonts/kbtruebeliever-oqwb-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
+    font-family: 'kbtruebeliever';
+    src: url('fonts/kbtruebeliever-oqwb-webfont.woff2') format('woff2'),
+         url('fonts/kbtruebeliever-oqwb-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
     font-family: 'kbpancakeparty';
-    src: url('kbpancakeparty-0xwv-webfont.woff2') format('woff2'),
-         url('kbpancakeparty-0xwv-webfont.woff') format('woff');
+    src: url('fonts/kbpancakeparty-0xwv-webfont.woff2') format('woff2'),
+         url('fonts/kbpancakeparty-0xwv-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
  }
+
+  @font-face {
+    font-family: 'kbsneakywalrus';
+    src: url('fonts/kbsneakywalrus-x43j-webfont.woff2') format('woff2'),
+         url('fonts/kbsneakywalrus-x43j-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
   
 body {
     background-color: white; 
