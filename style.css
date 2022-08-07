@@ -80,7 +80,7 @@ body {
     font-size: 50px;
     font-family: 'kbtruebeliever';
     font-weight: 900;
-    margin-top: 225px; 
+    margin-top: 200px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -150,7 +150,7 @@ body {
   }
 
   .second {
-    margin-top: 150px;
+    margin-top: 200px;
     opacity: 0;
     margin-bottom: 50px;
   }
@@ -271,8 +271,13 @@ body {
       font-size: 24px;
     }
 
+
     .top {
       font-size: 16px;
+    }
+
+    .bottom button {
+      gap: 10px;
     }
 
     .footer {
