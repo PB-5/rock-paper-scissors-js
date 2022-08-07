@@ -37,28 +37,28 @@
   }
   
   @font-face {
-    font-family: 'kbtruebeliever';
+    font-family: 'kbtruebeliever', arial;
     src: url('/fonts/kbtruebeliever.woff2') format('woff2'),
          url('/fonts/kbtruebeliever.woff') format('woff'),
          url('/fonts/kbtruebeliever.tff') format('truetype');
   }
   
    @font-face {
-    font-family: 'kbtruebeliever';
+    font-family: 'kbtruebeliever', arial;
     src: url('fonts/kbtruebeliever.woff2') format('woff2'),
          url('fonts/kbtruebeliever.woff') format('woff'),
          url('fonts/kbtruebeliever.tff') format('truetype');
   }
   
   @font-face {
-    font-family: 'kbpancakeparty';
+    font-family: 'kbpancakeparty', arial;
     src: url('/fonts/kbpancakeparty.woff2') format('woff2'),
          url('/fonts/kbpancakeparty.woff') format('woff'),
          url('/fonts/kbpancakeparty.tff') format('truetype');
  }
 
   @font-face {
-    font-family: 'kbsneakywalrus';
+    font-family: 'kbsneakywalrus', arial;
     src: url('/fonts/kbsneakywalrus.woff2') format('woff2'),
          url('/fonts/kbsneakywalrus.woff') format('woff'),
          url('/fonts/kbsneakywalrus.ttf') format('truetype');
@@ -127,9 +127,7 @@ body {
     font-family: 'KBPancakeParty', arial;
     -webkit-animation: squiggly-anim 0.34s linear infinite;
             animation: squiggly-anim 0.34s linear infinite;
-            display: flex;
-
-    
+            display: flex;    
     }
   
   /* 0 style */
