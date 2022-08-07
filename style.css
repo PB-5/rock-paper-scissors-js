@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/8a2a44686ce6fc8058fe4bbb9d57cef0?family=KBTrueBeliever);
+@import url(https://db.onlinewebfonts.com/c/1ddae2e4ee935d4ecea7ef4c0330de0a?family=KBPancakeParty);
 
 @-webkit-keyframes squiggly-anim {
     0% {
@@ -33,35 +35,35 @@
       filter: url("#squiggly-4");
     }
   }
-
-  @font-face {
-    font-family: 'arial';
-    src: url('./fonts/kbtruebeliever.woff2') format('woff2'),
-         url('./fonts/kbtruebeliever.woff') format('woff'),
-         url('./fonts/kbtruebeliever.tff') format('truetype');
-  }
   /*
+  @font-face {
+    font-family: 'kbtruebeliever';
+    src: url('/fonts/kbtruebeliever.woff2') format('woff2'),
+         url('/fonts/kbtruebeliever.woff') format('woff'),
+         url('/fonts/kbtruebeliever.tff') format('truetype');
+  }
+  
    @font-face {
     font-family: 'kbtruebeliever';
     src: url('fonts/kbtruebeliever.woff2') format('woff2'),
          url('fonts/kbtruebeliever.woff') format('woff'),
          url('fonts/kbtruebeliever.tff') format('truetype');
   }
-  */
+  
   @font-face {
-    font-family: 'monospace';
-    src: url('./fonts/kbpancakeparty.woff2') format('woff2'),
-         url('./fonts/kbpancakeparty.woff') format('woff'),
-         url('./fonts/kbpancakeparty.tff') format('truetype');
+    font-family: 'kbpancakeparty';
+    src: url('/fonts/kbpancakeparty.woff2') format('woff2'),
+         url('/fonts/kbpancakeparty.woff') format('woff'),
+         url('/fonts/kbpancakeparty.tff') format('truetype');
  }
 
   @font-face {
-    font-family: 'sans-serif';
-    src: url('./fonts/kbsneakywalrus.woff2') format('woff2'),
-         url('./fonts/kbsneakywalrus.woff') format('woff'),
-         url('./fonts/kbsneakywalrus.ttf') format('truetype');
+    font-family: 'kbsneakywalrus';
+    src: url('/fonts/kbsneakywalrus.woff2') format('woff2'),
+         url('/fonts/kbsneakywalrus.woff') format('woff'),
+         url('/fonts/kbsneakywalrus.ttf') format('truetype');
   }
-  
+  */
 body {
     background-color: white; 
     font-family: 'kbtruebeliever', arial;
@@ -89,7 +91,7 @@ body {
 
     font-size: 16px;
     font-weight: 400;
-    font-family: 'kbtruebeliever', arial;
+    font-family: 'KBTrueBeliever', arial;
 
     color: rgb(0, 0, 0);
     background: none;
@@ -123,7 +125,7 @@ body {
   /* Player and Computer */
   .score {
     font-size: 20px;
-    font-family: 'Kbpancakeparty', monospace;
+    font-family: 'KBPancakeParty', monospace;
     -webkit-animation: squiggly-anim 0.34s linear infinite;
             animation: squiggly-anim 0.34s linear infinite;
             display: flex;
@@ -133,7 +135,7 @@ body {
   
   /* 0 style */
   .plScore, .comScore {
-    font-family: 'Kbpancakeparty', monospace;
+    font-family: 'KBPancakeParty', monospace;
     font-size: 26px;
     margin-top: 30px;;
     margin-left: 10px;
@@ -187,7 +189,7 @@ body {
             animation: squiggly-anim 0.34s linear infinite;
     font-size: 26px;
     margin-right: 10px;
-    font-family: 'Kbpancakeparty', monospace;
+    font-family: 'KBPancakeParty', monospace;
 
     margin-top: -12px;
   }
