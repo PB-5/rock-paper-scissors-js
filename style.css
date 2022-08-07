@@ -272,6 +272,7 @@ body {
 
   @media (max-width: 550px) {
     .first {
+      margin-top: 200px;
       font-size: 24px;
     }
 
@@ -300,7 +301,7 @@ body {
     }
 
     .bottom button {
-      gap: 10px;
+      gap: 5px;
     }
 
     .footer {
