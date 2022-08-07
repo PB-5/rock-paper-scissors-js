@@ -35,28 +35,28 @@
   }
 
   @font-face {
-    font-family: 'kbtruebeliever';
+    font-family: 'arial';
     src: url('fonts/kbtruebeliever.woff2') format('woff2'),
          url('fonts/kbtruebeliever.woff') format('woff'),
          url('fonts/kbtruebeliever.tff') format('truetype');
   }
-
+  /*
    @font-face {
     font-family: 'kbtruebeliever';
     src: url('fonts/kbtruebeliever.woff2') format('woff2'),
          url('fonts/kbtruebeliever.woff') format('woff'),
          url('fonts/kbtruebeliever.tff') format('truetype');
   }
-
+  */
   @font-face {
-    font-family: 'kbpancakeparty';
+    font-family: 'monospace';
     src: url('fonts/kbpancakeparty.woff2') format('woff2'),
          url('fonts/kbpancakeparty.woff') format('woff'),
          url('fonts/kbpancakeparty.tff') format('truetype');
  }
 
   @font-face {
-    font-family: 'kbsneakywalrus';
+    font-family: 'sans-serif';
     src: url('fonts/kbsneakywalrus.woff2') format('woff2'),
          url('fonts/kbsneakywalrus.woff') format('woff'),
          url('fonts/kbsneakywalrus.ttf') format('truetype');
@@ -89,7 +89,7 @@ body {
 
     font-size: 16px;
     font-weight: 400;
-    font-family: 'kbtruebeliever', monospace;
+    font-family: 'kbtruebeliever', arial;
 
     color: rgb(0, 0, 0);
     background: none;
@@ -123,7 +123,7 @@ body {
   /* Player and Computer */
   .score {
     font-size: 20px;
-    font-family: 'Kbpancakeparty', arial;
+    font-family: 'Kbpancakeparty', monospace;
     -webkit-animation: squiggly-anim 0.34s linear infinite;
             animation: squiggly-anim 0.34s linear infinite;
             display: flex;
@@ -133,7 +133,7 @@ body {
   
   /* 0 style */
   .plScore, .comScore {
-    font-family: 'Kbpancakeparty', arial;
+    font-family: 'Kbpancakeparty', monospace;
     font-size: 26px;
     margin-top: 30px;;
     margin-left: 10px;
@@ -187,7 +187,7 @@ body {
             animation: squiggly-anim 0.34s linear infinite;
     font-size: 26px;
     margin-right: 10px;
-    font-family: 'Kbpancakeparty', arial;
+    font-family: 'Kbpancakeparty', monospace;
 
     margin-top: -12px;
   }
@@ -232,7 +232,7 @@ body {
     padding-bottom: 10px;
     
     font-size: 16px;
-    font-family: 'Kbsneakywalrus', arial;
+    font-family: 'Kbsneakywalrus', sans-serif;
     font-weight: 600;
 
     -webkit-animation: squiggly-anim 0.34s linear infinite;
