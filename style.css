@@ -66,14 +66,13 @@
   
 body {
     background-color: white; 
-    font-family: 'kbtruebeliever', arial;
 }
 
 .first {
     -webkit-animation: squiggly-anim 0.34s linear infinite;
             animation: squiggly-anim 0.34s linear infinite;
     font-size: 50px;
-
+    font-family: 'KBTrueBeliever', arial;
     margin-top: 50px; 
     display: flex;
     flex-direction: column;
@@ -91,7 +90,7 @@ body {
 
     font-size: 16px;
     font-weight: 400;
-    font-family: 'kbtruebeliever', arial;
+    font-family: 'KBTrueBeliever', arial;
 
     color: rgb(0, 0, 0);
     background: none;
@@ -125,7 +124,7 @@ body {
   /* Player and Computer */
   .score {
     font-size: 20px;
-    font-family: 'kbpancakeparty', arial;
+    font-family: 'KBPancakeParty', arial;
     -webkit-animation: squiggly-anim 0.34s linear infinite;
             animation: squiggly-anim 0.34s linear infinite;
             display: flex;
@@ -135,7 +134,7 @@ body {
   
   /* 0 style */
   .plScore, .comScore {
-    font-family: 'kbpancakeparty', arial;
+    font-family: 'KBPancakeParty', arial;
     font-size: 26px;
     margin-top: 30px;;
     margin-left: 10px;
@@ -189,7 +188,7 @@ body {
             animation: squiggly-anim 0.34s linear infinite;
     font-size: 26px;
     margin-right: 10px;
-    font-family: 'kbpancakeparty', arial;
+    font-family: 'KBPancakeParty', arial;
 
     margin-top: -12px;
   }
@@ -234,7 +233,7 @@ body {
     padding-bottom: 10px;
     
     font-size: 16px;
-    font-family: 'Kbpancakeparty', arial;
+    font-family: 'KBPancakeParty', arial;
     font-weight: 600;
 
     -webkit-animation: squiggly-anim 0.34s linear infinite;
