@@ -263,19 +263,10 @@ body {
   
     .messageDisplay {
       font-size: 24px;
-      font-family: 'kbpancakeparty', arial;
     }
   
     .board {
       margin-top: 10px;
-    }
-
-    .score {
-      font-family: 'kbpancakeparty', arial;
-    }
-
-    .plScore, .comScore {
-      font-family: 'kbpancakeparty', arial;
     }
 
     .top {
@@ -288,6 +279,7 @@ body {
 
     .footer {
       text-align: center;
-      font-family: 'Kbpancakeparty', arial;
     }
   }
+
+  
