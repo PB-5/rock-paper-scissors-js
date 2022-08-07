@@ -56,8 +56,8 @@ const playGame = () => {
         bt.addEventListener('click', function () {
   
           // set the img back to rock image
-          player.src = `./img/player-placeholder.png`
-          computer.src = `./img/comp/comp-placeholder.png`
+          player.src = `./img/rock.gif`
+          computer.src = `./img/comp/rock.gif`
         
           // play audio effect
           shake.play() 
@@ -82,7 +82,7 @@ const playGame = () => {
           // timer after run action
           setTimeout(() => {
   
-            computer.src = `./img/comp/${compSel}.gif`  // Add Photoshop GIF files into img folder
+            computer.src = `./img/comp/${compSel}.gif`  
             player.src = `./img/${playerSel}.gif`
   
             // put back the pointer events after running
@@ -92,8 +92,6 @@ const playGame = () => {
   
             // evaluate who won the game
             evaluateResult(playerSel, compSel)
-          
-       
           }, 1000)
         })
       })  
@@ -110,7 +108,6 @@ const evaluateResult = (player, comp) => {
     }, 600) 
 }
 
-
   // if player wins
   const win = () => {
     const plScore = document.querySelector('.plScore');
@@ -126,16 +123,18 @@ const evaluateResult = (player, comp) => {
     plScore.textContent = pScore
     plScore.style.animation = 'addScore 0.2s ease'
 
+    // if score is met return to menu and disable buttons
     if (pScore === 5) {
       mes.textContent = "You Won! Returning to Menu";
-      return setTimeout(() => window.location.reload(), 3500)
+      btn.forEach(b => b.disabled = true)
+      return setTimeout(() => window.location.reload(), 3500);
     }
   }
 
   // if player lose
   const lose = () => {
     const comScore = document.querySelector('.comScore');
-    const btn = document.querySelectorAll('.btn'); // need to add disable buttons after 5 round
+    const btn = document.querySelectorAll('.btn'); 
 
     // remove animation after
     comScore.addEventListener('animationend', function () { this.style.animation = '' })
@@ -147,20 +146,20 @@ const evaluateResult = (player, comp) => {
     comScore.textContent = cScore
     comScore.style.animation = 'addScore 0.2s ease'
 
+    // if score is met return to menu and disable buttons
     if (cScore === 5) {
       mes.textContent = "Computer Won! Returning to Menu";
+      btn.forEach(b => b.disabled = true)
       return setTimeout(() => window.location.reload(), 3500);
     }
   }
 
-  //when game is tied
+  // when game is tied
    const tie = () => {
    mes.textContent = `It's a tie!`
   }
-
-// when score is 5 refresh the game automatically
 }
 
-  // start game
+// start game
 startGame();
 playGame();
