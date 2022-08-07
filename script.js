@@ -114,6 +114,7 @@ const evaluateResult = (player, comp) => {
   // if player wins
   const win = () => {
     const plScore = document.querySelector('.plScore');
+    const btn = document.querySelectorAll('.btn'); // need to add disable buttons after 5 round
 
     // remove animation after 
     plScore.addEventListener('animationend', function () { this.style.animation = '' })
@@ -134,6 +135,7 @@ const evaluateResult = (player, comp) => {
   // if player lose
   const lose = () => {
     const comScore = document.querySelector('.comScore');
+    const btn = document.querySelectorAll('.btn'); // need to add disable buttons after 5 round
 
     // remove animation after
     comScore.addEventListener('animationend', function () { this.style.animation = '' })
