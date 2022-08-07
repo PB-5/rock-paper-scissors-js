@@ -1,3 +1,4 @@
+
 @-webkit-keyframes squiggly-anim {
     0% {
       filter: url("#squiggly-0");
@@ -36,33 +37,29 @@
   @font-face {
     font-family: 'kbtruebeliever';
     src: url('fonts/kbtruebeliever-oqwb-webfont.woff2') format('woff2'),
-         url('fonts/kbtruebeliever-oqwb-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+         url('fonts/kbtruebeliever-oqwb-webfont.woff') format('woff'),
+         url('fonts/kbtruebeliever-oqwb-webfont.tff') format('truetype');
   }
 
-  @font-face {
+   @font-face {
     font-family: 'kbtruebeliever';
     src: url('fonts/kbtruebeliever-oqwb-webfont.woff2') format('woff2'),
-         url('fonts/kbtruebeliever-oqwb-webfont.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
+         url('fonts/kbtruebeliever-oqwb-webfont.woff') format('woff'),
+         url('fonts/kbtruebeliever-oqwb-webfont.tff') format('truetype');
   }
 
   @font-face {
     font-family: 'kbpancakeparty';
     src: url('fonts/kbpancakeparty-0xwv-webfont.woff2') format('woff2'),
-         url('fonts/kbpancakeparty-0xwv-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+         url('fonts/kbpancakeparty-0xwv-webfont.woff') format('woff'),
+         url('fonts/kbpancakeparty-0xwv-webfont.tff') format('truetype');
  }
 
   @font-face {
     font-family: 'kbsneakywalrus';
     src: url('fonts/kbsneakywalrus-x43j-webfont.woff2') format('woff2'),
-         url('fonts/kbsneakywalrus-x43j-webfont.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
+         url('fonts/kbsneakywalrus-x43j-webfont.woff') format('woff'),
+         url('fonts/kbsneakywalrus-x43j-webfont.ttf') format('truetype');
   }
   
 body {
