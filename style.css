@@ -260,7 +260,7 @@ body {
   @media (max-width: 550px) {
     .first {
       font-size: 24px;
-      margin-top: 200px;
+      margin-top: 20px;
     }
 
     #start {
@@ -273,7 +273,7 @@ body {
     }
   
     .board {
-      margin-top: 70px;
+      margin-bottom: 150px;
     }
 
     .top {
