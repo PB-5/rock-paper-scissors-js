@@ -125,7 +125,7 @@ body {
   /* Player and Computer */
   .score {
     font-size: 20px;
-    font-family: 'kbpancakeparty', monospace;
+    font-family: 'kbpancakeparty', arial;
     -webkit-animation: squiggly-anim 0.34s linear infinite;
             animation: squiggly-anim 0.34s linear infinite;
             display: flex;
@@ -135,7 +135,7 @@ body {
   
   /* 0 style */
   .plScore, .comScore {
-    font-family: 'kbpancakeparty', monospace;
+    font-family: 'kbpancakeparty', arial;
     font-size: 26px;
     margin-top: 30px;;
     margin-left: 10px;
@@ -189,7 +189,7 @@ body {
             animation: squiggly-anim 0.34s linear infinite;
     font-size: 26px;
     margin-right: 10px;
-    font-family: 'kbpancakeparty', monospace;
+    font-family: 'kbpancakeparty', arial;
 
     margin-top: -12px;
   }
@@ -234,7 +234,7 @@ body {
     padding-bottom: 10px;
     
     font-size: 16px;
-    font-family: 'Kbsneakywalrus', sans-serif;
+    font-family: 'Kbpancakeparty', arial;
     font-weight: 600;
 
     -webkit-animation: squiggly-anim 0.34s linear infinite;
@@ -260,6 +260,7 @@ body {
     }
 
     #start {
+      margin-top: -10px;
       font-size: 36px;
     }
   
