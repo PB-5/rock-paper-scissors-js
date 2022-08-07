@@ -35,7 +35,7 @@
       filter: url("#squiggly-4");
     }
   }
-  /*
+  
   @font-face {
     font-family: 'kbtruebeliever';
     src: url('/fonts/kbtruebeliever.woff2') format('woff2'),
@@ -63,7 +63,7 @@
          url('/fonts/kbsneakywalrus.woff') format('woff'),
          url('/fonts/kbsneakywalrus.ttf') format('truetype');
   }
-  */
+  
 body {
     background-color: white; 
     font-family: 'kbtruebeliever', arial;
@@ -91,7 +91,7 @@ body {
 
     font-size: 16px;
     font-weight: 400;
-    font-family: 'KBTrueBeliever', arial;
+    font-family: 'kbtruebeliever', arial;
 
     color: rgb(0, 0, 0);
     background: none;
@@ -125,7 +125,7 @@ body {
   /* Player and Computer */
   .score {
     font-size: 20px;
-    font-family: 'KBPancakeParty', monospace;
+    font-family: 'kbpancakeparty', monospace;
     -webkit-animation: squiggly-anim 0.34s linear infinite;
             animation: squiggly-anim 0.34s linear infinite;
             display: flex;
@@ -135,7 +135,7 @@ body {
   
   /* 0 style */
   .plScore, .comScore {
-    font-family: 'KBPancakeParty', monospace;
+    font-family: 'kbpancakeparty', monospace;
     font-size: 26px;
     margin-top: 30px;;
     margin-left: 10px;
@@ -189,7 +189,7 @@ body {
             animation: squiggly-anim 0.34s linear infinite;
     font-size: 26px;
     margin-right: 10px;
-    font-family: 'KBPancakeParty', monospace;
+    font-family: 'kbpancakeparty', monospace;
 
     margin-top: -12px;
   }
