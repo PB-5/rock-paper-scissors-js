@@ -10,12 +10,12 @@ The goal of this repository is to practice the following skill sets:
   - Strict Equality
   - Comparison Operators
   - Math methods: `floor` & `random`
-   - Regular expressions
+  - Regular expressions
   - DOM Manipulation
-    - Event Handlers
-    - CSS Style changes
-    - Timeouts
-    - `querySelector` & `getElementById`
+  - Event Handlers
+  - CSS Style changes
+  - Timeouts
+  - `querySelector` & `getElementById`
 - Chrome DevTools & Debugging
 - Problem Solving
   - Clearly defining the problem
