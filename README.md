@@ -34,8 +34,8 @@ Things I could imrpove on is clean up animations in Photoshop, tidying up the pi
 
 > Main menu
 
-<img src="‪./rock-paper-scissors-js/main-menu-rps.png" width="80%" alt="main menu">
+<img src="‪main-menu-rps.png" width="80%" alt="main menu">
 
 > Game
 
-<img src="./rock-paper-scissors-js/game-rps.png" width="80%" alt="game">
+<img src="game-rps.png" width="80%" alt="game">
