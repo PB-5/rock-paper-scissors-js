@@ -34,8 +34,8 @@ Things I could imrpove on is clean up animations in Photoshop, tidying up the pi
 
 > Main menu
 
-<img src="‪./main-menu.png" width="80%" alt="menu">
+<img src="main-menu.png" width="80%" alt="menu">
 
 > Game
 
-<img src="./game-rps.png" width="80%" alt="game">
+<img src="game-rps.png" width="80%" alt="game">
