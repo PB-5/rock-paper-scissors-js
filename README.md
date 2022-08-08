@@ -26,15 +26,15 @@ The goal of this repository is to practice the following skill sets:
 
 Things I could imrpove on is clean up animations in Photoshop, tidying up the pictures so the width is more mobile friendly.
 
-## Live Preview  
+## Links 
 
-[Live](https://pb-5.github.io/rock-paper-scissors-js/)
+[Live preview](https://pb-5.github.io/rock-paper-scissors-js/)
 
 ## Screenshots 
 
 > Main menu
 
-<img src="‪./rock-paper-scissors-js/main-me" width="80%" alt="main menu">
+<img src="‪./rock-paper-scissors-js/main-menu-rps.png" width="80%" alt="main menu">
 
 > Game
 
