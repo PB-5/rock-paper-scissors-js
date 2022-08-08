@@ -24,7 +24,7 @@ The goal of this repository is to practice the following skill sets:
   - Connecting sub-problems into a final solution
   - Git Fundamentals
 
-Things I could imrpove on is clean up animations in Photoshop, tidying up the pictures so the width is more mobile friendly.
+Things I could imrpove on is clean up animations in Photoshop, tidying up the pictures so the width is more mobile friendly. Time taken 3 weeks.
 
 ## Links 
 
